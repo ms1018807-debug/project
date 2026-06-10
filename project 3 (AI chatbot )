@@ -1,0 +1,48 @@
+# Rule Based AI Python Chatbot
+
+import datetime
+import time
+
+name = input(" Welcome ,enter your name :")
+CurrentTime = datetime.datetime.now().hour
+
+
+if (5 <= CurrentTime <= 11):
+    print("Good Morning", name)
+elif (11 <= CurrentTime <= 16):
+    print("Good Afternoon", name)
+elif (16 <= CurrentTime <= 19):
+    print("Good Evening",name)
+else:
+    print("Good night",name)
+
+
+print("Namaste! Welcome to your chatbot")
+print("you can ask me basic question , Type 'bye' to exit form bot ")
+
+# chatbot memory creation { dictionary of responses}
+
+Responses = {
+    "hello": "Hi, welocome How can I help you",
+    "how are you" : "I am very fine . Thank you",
+    "who are you": "I am smart chatbot",
+    "motivate me" : "keep going. Every bug of your project makes you a better developer",
+    "Happy" : "Great to hear that"
+
+}
+def get_response(Userquestion):
+    Userquestion = Userquestion.lower()
+    for eachkey in Responses:
+        if eachkey in Userquestion:
+            return Responses[eachkey]
+    
+    return "I am not able to tell that yet. I am still in learning mode."
+
+
+while True :
+    UserInput = input("please ask a question :")
+    reply = get_response(UserInput)
+    print("Bot response :",reply)
+
+    if "bye" in UserInput.lower():
+        break
