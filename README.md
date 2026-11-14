@@ -49,9 +49,13 @@ A practical financial management tool built with Python to log, manage, and trac
 * **Concepts Used:** Lists, Dictionaries, user input validation, and accumulator logic.
 ## 4. How to Run
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/ms1018807-debug/your-repository-name.git
-  
+1. Clone the repository:
+git clone https://github.com/ms1018807-debug/project.git
 
-  
+2. Navigate to the folder:
+cd project
+
+3. Run the scripts:
+- Run YouTube Manager: python Youtube_videos_manager.py
+- Run AI Chatbot: python ai_chatbot.py
+- Run Expense Tracker: python expense_tracker.py
